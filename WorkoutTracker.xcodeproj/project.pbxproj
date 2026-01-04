@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4B58E20C49574ABC85186DF9 /* LibraryExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E5BBCA86E54473BFA6C92C /* LibraryExercise.swift */; };
-		26561648967741239E681AAF /* SessionExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F1DA06D6864EB4BC9989FD /* SessionExercise.swift */; };
-		4748FECEA9014846833D7F30 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF10294D0024859B64AE8C2 /* Session.swift */; };
 		00000001 /* WorkoutTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000001 /* WorkoutTrackerApp.swift */; };
 		00000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000002 /* ContentView.swift */; };
 		00000003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10000003 /* Assets.xcassets */; };
@@ -48,19 +45,19 @@
 		00000036 /* ProgressChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000036 /* ProgressChartView.swift */; };
 		00000037 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 20000001 /* FirebaseAuth */; };
 		00000038 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 20000002 /* FirebaseFirestore */; };
-		E1F71BDE2F0858C200DD9BD8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1F71BDD2F0858C200DD9BD8 /* GoogleService-Info.plist */; };
 		076EA2A43597CB910A07432C /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D1BB78D3DD59F34287F8C8 /* AppTheme.swift */; };
-		E57445FE292A309663250B7B /* PremiumCardComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB8DC55F254FBCD254C02F3 /* PremiumCardComponents.swift */; };
-		3B27D63E2F3AE43C818CFC72 /* HomeView_Premium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D71ED59A88C2531616C5D0D /* HomeView_Premium.swift */; };
-		ABB62BB837FA61ED821E1367 /* ProgramListView_Premium.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA57F8829CDD6BF5095A03F /* ProgramListView_Premium.swift */; };
-		FC174729DDCF8325E343849C /* ReportsView_Premium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1A46721757033C97967C14 /* ReportsView_Premium.swift */; };
 		18CAC2E95D64A143B83198C2 /* PremiumTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C026525D1266D921C2BBA7FB /* PremiumTabBar.swift */; };
+		26561648967741239E681AAF /* SessionExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F1DA06D6864EB4BC9989FD /* SessionExercise.swift */; };
+		3B27D63E2F3AE43C818CFC72 /* HomeView_Premium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D71ED59A88C2531616C5D0D /* HomeView_Premium.swift */; };
+		4748FECEA9014846833D7F30 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF10294D0024859B64AE8C2 /* Session.swift */; };
+		4B58E20C49574ABC85186DF9 /* LibraryExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E5BBCA86E54473BFA6C92C /* LibraryExercise.swift */; };
+		ABB62BB837FA61ED821E1367 /* ProgramListView_Premium.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA57F8829CDD6BF5095A03F /* ProgramListView_Premium.swift */; };
+		E1F71BDE2F0858C200DD9BD8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1F71BDD2F0858C200DD9BD8 /* GoogleService-Info.plist */; };
+		E57445FE292A309663250B7B /* PremiumCardComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB8DC55F254FBCD254C02F3 /* PremiumCardComponents.swift */; };
+		FC174729DDCF8325E343849C /* ReportsView_Premium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1A46721757033C97967C14 /* ReportsView_Premium.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		37E5BBCA86E54473BFA6C92C /* LibraryExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryExercise.swift; sourceTree = "<group>"; };
-		F6F1DA06D6864EB4BC9989FD /* SessionExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionExercise.swift; sourceTree = "<group>"; };
-		DDF10294D0024859B64AE8C2 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		10000000 /* WorkoutTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkoutTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10000001 /* WorkoutTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTrackerApp.swift; sourceTree = "<group>"; };
 		10000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -98,13 +95,16 @@
 		10000034 /* LogDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDetailView.swift; sourceTree = "<group>"; };
 		10000035 /* ReportsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsView.swift; sourceTree = "<group>"; };
 		10000036 /* ProgressChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressChartView.swift; sourceTree = "<group>"; };
-		E1F71BDD2F0858C200DD9BD8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		63D1BB78D3DD59F34287F8C8 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
-		BDB8DC55F254FBCD254C02F3 /* PremiumCardComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumCardComponents.swift; sourceTree = "<group>"; };
+		37E5BBCA86E54473BFA6C92C /* LibraryExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryExercise.swift; sourceTree = "<group>"; };
 		5D71ED59A88C2531616C5D0D /* HomeView_Premium.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView_Premium.swift; sourceTree = "<group>"; };
-		FAA57F8829CDD6BF5095A03F /* ProgramListView_Premium.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramListView_Premium.swift; sourceTree = "<group>"; };
+		63D1BB78D3DD59F34287F8C8 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
 		6D1A46721757033C97967C14 /* ReportsView_Premium.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsView_Premium.swift; sourceTree = "<group>"; };
+		BDB8DC55F254FBCD254C02F3 /* PremiumCardComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumCardComponents.swift; sourceTree = "<group>"; };
 		C026525D1266D921C2BBA7FB /* PremiumTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumTabBar.swift; sourceTree = "<group>"; };
+		DDF10294D0024859B64AE8C2 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		E1F71BDD2F0858C200DD9BD8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F6F1DA06D6864EB4BC9989FD /* SessionExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionExercise.swift; sourceTree = "<group>"; };
+		FAA57F8829CDD6BF5095A03F /* ProgramListView_Premium.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramListView_Premium.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,10 +161,10 @@
 				10000006 /* Exercise.swift */,
 				10000007 /* WorkoutLog.swift */,
 				10000008 /* PersonalRecord.swift */,
-							37E5BBCA86E54473BFA6C92C /* Session.swift */,
-				F6F1DA06D6864EB4BC9989FD /* Session.swift */,
+				37E5BBCA86E54473BFA6C92C /* LibraryExercise.swift */,
+				F6F1DA06D6864EB4BC9989FD /* SessionExercise.swift */,
 				DDF10294D0024859B64AE8C2 /* Session.swift */,
-);
+			);
 			path = Models;
 			sourceTree = "<group>";
 		};
@@ -198,8 +198,8 @@
 				40000008 /* Templates */,
 				40000009 /* Logs */,
 				40000013 /* Reports */,
-							C026525D1266D921C2BBA7FB /* PremiumTabBar.swift */,
-);
+				C026525D1266D921C2BBA7FB /* PremiumTabBar.swift */,
+			);
 			path = Views;
 			sourceTree = "<group>";
 		};
@@ -220,8 +220,8 @@
 				10000029 /* WorkoutDayView.swift */,
 				10000030 /* WorkoutDayFormView.swift */,
 				10000031 /* ExerciseFormView.swift */,
-							FAA57F8829CDD6BF5095A03F /* ProgramListView_Premium.swift */,
-);
+				FAA57F8829CDD6BF5095A03F /* ProgramListView_Premium.swift */,
+			);
 			path = Templates;
 			sourceTree = "<group>";
 		};
@@ -242,8 +242,8 @@
 				10000021 /* EmptyStateView.swift */,
 				10000022 /* ExerciseRowView.swift */,
 				10000023 /* SetRowView.swift */,
-							BDB8DC55F254FBCD254C02F3 /* PremiumCardComponents.swift */,
-);
+				BDB8DC55F254FBCD254C02F3 /* PremiumCardComponents.swift */,
+			);
 			path = Components;
 			sourceTree = "<group>";
 		};
@@ -253,8 +253,8 @@
 				10000017 /* Constants.swift */,
 				10000018 /* Extensions.swift */,
 				10000019 /* ExportManager.swift */,
-							63D1BB78D3DD59F34287F8C8 /* AppTheme.swift */,
-);
+				63D1BB78D3DD59F34287F8C8 /* AppTheme.swift */,
+			);
 			path = Utilities;
 			sourceTree = "<group>";
 		};
@@ -262,8 +262,8 @@
 			isa = PBXGroup;
 			children = (
 				10000025 /* HomeView.swift */,
-							5D71ED59A88C2531616C5D0D /* HomeView_Premium.swift */,
-);
+				5D71ED59A88C2531616C5D0D /* HomeView_Premium.swift */,
+			);
 			path = Home;
 			sourceTree = "<group>";
 		};
@@ -272,8 +272,8 @@
 			children = (
 				10000035 /* ReportsView.swift */,
 				10000036 /* ProgressChartView.swift */,
-							6D1A46721757033C97967C14 /* ReportsView_Premium.swift */,
-);
+				6D1A46721757033C97967C14 /* ReportsView_Premium.swift */,
+			);
 			path = Reports;
 			sourceTree = "<group>";
 		};
@@ -389,7 +389,7 @@
 				00000034 /* LogDetailView.swift in Sources */,
 				00000035 /* ReportsView.swift in Sources */,
 				00000036 /* ProgressChartView.swift in Sources */,
-							076EA2A43597CB910A07432C /* AppTheme.swift in Sources */,
+				076EA2A43597CB910A07432C /* AppTheme.swift in Sources */,
 				E57445FE292A309663250B7B /* PremiumCardComponents.swift in Sources */,
 				3B27D63E2F3AE43C818CFC72 /* HomeView_Premium.swift in Sources */,
 				ABB62BB837FA61ED821E1367 /* ProgramListView_Premium.swift in Sources */,
@@ -398,7 +398,7 @@
 				4B58E20C49574ABC85186DF9 /* LibraryExercise.swift in Sources */,
 				26561648967741239E681AAF /* SessionExercise.swift in Sources */,
 				4748FECEA9014846833D7F30 /* Session.swift in Sources */,
-);
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
@@ -528,6 +528,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 35Q5DRWA8G;
@@ -547,6 +548,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nicholasprijic.workouttracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -558,6 +560,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 35Q5DRWA8G;
@@ -577,6 +580,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nicholasprijic.workouttracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
