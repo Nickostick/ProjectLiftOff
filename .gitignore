@@ -98,3 +98,11 @@ GoogleService-Info.plist
 
 # macOS
 .DS_Store
+
+# Development documentation (keep locally, not in repo)
+COLOR_REFERENCE.md
+DESIGN_SYSTEM.md
+IMPLEMENTATION_CHECKLIST.md
+PREMIUM_REDESIGN_GUIDE.md
+QUICK_IMPLEMENTATION.md
+REDESIGN_SUMMARY.md

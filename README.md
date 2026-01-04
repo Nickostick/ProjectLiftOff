@@ -1,143 +1,318 @@
 # ProjectLiftOff 🏋️
 
-A complete iOS workout tracking app with Firebase backend, featuring workout programs, real-time logging, progressive overload tracking, and detailed progress reports.
+A native iOS workout tracking application built with SwiftUI and Firebase. ProjectLiftOff replaces traditional spreadsheet-based workout logging with an intuitive mobile experience designed for progressive overload training.
 
-## ⚠️ Security Notice
+## What is ProjectLiftOff?
 
-**This is a template app.** You must set up your own Firebase project to use it:
-- The repository does NOT contain API keys or sensitive credentials
-- You need to add your own `GoogleService-Info.plist` (see setup below)
-- Configure Firebase Security Rules to protect your data
-- Never commit your real Firebase config file to version control
+ProjectLiftOff is a comprehensive workout tracking app that helps you:
 
-## Features
+- **Create structured workout programs** - Define reusable templates with multiple workout days
+- **Log workouts in real-time** - Track sets, reps, and weight with built-in rest timers
+- **Track progressive overload** - Automatic personal record detection and historical tracking
+- **Analyze your progress** - Visual charts showing volume, strength trends, and PRs over time
+- **Train anywhere** - Cloud sync via Firebase ensures your data is available across devices
 
-- **Authentication**: Apple Sign In and email/password via Firebase Auth
-- **Premium Dark Theme**: Modern dark UI with neon green (#D4FF00) accents
-- **Program Templates**: Create, edit, copy, share, and delete workout programs
-- **Workout Days**: Organize programs into multiple workout days (e.g., "Arm Day", "Chest Day")
-- **Exercises**: Track sets, reps, weight, notes, and rest times
-- **Workout Logging**: Start from templates, log actual performance, timer included
-- **Personal Records**: Automatic PR detection and tracking
-- **Reports**: Weekly volume charts, exercise progress graphs, export to PDF/CSV
-- **Offline Support**: Works offline with automatic sync when online
-- **Notifications**: Configurable workout reminders
-- **Dark Mode**: Full support for iOS dark mode
+Built for lifters who want to move beyond spreadsheets while maintaining full control over their programming.
 
-## Requirements
+## Architecture
 
-- iOS 17.0+
-- Xcode 15.0+
-- Firebase account
+### Tech Stack
 
-## Firebase Setup
+- **Frontend**: SwiftUI (iOS 17.0+)
+- **Backend**: Firebase (Firestore + Authentication)
+- **Language**: Swift
+- **Minimum iOS**: 17.0
+- **Authentication**: Apple Sign In + Email/Password
 
-### 1. Create Firebase Project
+### Design Philosophy
 
-1. Go to [Firebase Console](https://console.firebase.google.com/)
-2. Click "Add project" and follow the wizard
-3. Once created, click the iOS icon to add an iOS app
-4. Enter bundle ID: `com.workout.tracker` (or your custom bundle ID)
-5. Download `GoogleService-Info.plist`
+**Dark-First UI**: Modern dark theme with neon green (#D4FF00) accents optimized for gym environments
 
-### 2. Add Configuration File
+**Offline-First**: Local caching with automatic sync when connectivity is restored
 
-1. Place `GoogleService-Info.plist` in the `WorkoutTracker/WorkoutTracker/` directory
-2. In Xcode, right-click the WorkoutTracker folder → Add Files to "WorkoutTracker"
-3. Select `GoogleService-Info.plist`
+**Progressive Overload Focus**: Built specifically for strength training with emphasis on tracking weight progression
 
-### 3. Enable Firebase Services
-
-In Firebase Console:
-
-1. **Authentication**:
-   - Go to Authentication → Sign-in method
-   - Enable "Email/Password"
-   - Enable "Apple" for Sign in with Apple support
-
-2. **Firestore**:
-   - Go to Firestore Database → Create database
-   - Choose "Start in test mode" for development
-   - Select a location close to your users
-
-3. **Security Rules** (REQUIRED for production):
-   - In Firestore Console, go to Rules tab
-   - Copy the contents from `firestore.rules` in this repo
-   - Deploy the rules to ensure users can only access their own data
-   - **Critical**: Never use "test mode" rules in production!
-
-## Installation
-
-1. Clone or download this project
-2. Open `WorkoutTracker.xcodeproj` in Xcode
-3. Wait for Swift Package Manager to resolve Firebase dependencies (this may take a few minutes)
-4. Add your `GoogleService-Info.plist` file
-5. Update the bundle identifier in project settings if desired
-6. Set your development team in Signing & Capabilities
-7. Build and run on simulator or device
-
-## Project Structure
+### Project Structure
 
 ```
 WorkoutTracker/
-├── WorkoutTrackerApp.swift      # App entry point
-├── ContentView.swift            # Root view with auth routing
-├── Assets.xcassets              # App icons and colors
+├── Models/                    # Data models
+│   ├── Program.swift          # Workout program template
+│   ├── WorkoutDay.swift       # Training day within a program
+│   ├── Exercise.swift         # Exercise definition with targets
+│   ├── WorkoutLog.swift       # Completed workout record
+│   └── PersonalRecord.swift   # PR tracking
 │
-├── Models/
-│   ├── Program.swift            # Workout program template
-│   ├── WorkoutDay.swift         # Day within a program
-│   ├── Exercise.swift           # Exercise definition
-│   ├── WorkoutLog.swift         # Completed workout log
-│   └── PersonalRecord.swift     # PR tracking
+├── ViewModels/                # Business logic & state management
+│   ├── AuthViewModel.swift
+│   ├── ProgramViewModel.swift
+│   ├── WorkoutLogViewModel.swift
+│   └── ReportsViewModel.swift
 │
-├── ViewModels/
-│   ├── AuthViewModel.swift      # Authentication state
-│   ├── ProgramViewModel.swift   # Template management
-│   ├── WorkoutLogViewModel.swift # Workout logging
-│   └── ReportsViewModel.swift   # Reports and stats
+├── Views/                     # SwiftUI views
+│   ├── Auth/                  # Authentication screens
+│   ├── Home/                  # Dashboard
+│   ├── Templates/             # Program management
+│   ├── Logs/                  # Workout logging & history
+│   └── Reports/               # Progress charts & analytics
 │
-├── Services/
-│   ├── FirebaseService.swift    # Firebase initialization
-│   ├── AuthManager.swift        # Authentication
-│   ├── FirestoreManager.swift   # Database operations
-│   └── NotificationManager.swift # Push notifications
+├── Services/                  # External integrations
+│   ├── FirebaseService.swift
+│   ├── AuthManager.swift
+│   ├── FirestoreManager.swift
+│   └── NotificationManager.swift
 │
-├── Views/
-│   ├── Auth/                    # Login/signup
-│   ├── Home/                    # Dashboard
-│   ├── Templates/               # Program management
-│   ├── Logs/                    # Workout history
-│   └── Reports/                 # Charts and export
+├── Components/                # Reusable UI components
+│   ├── PremiumCardComponents.swift
+│   ├── ExerciseRowView.swift
+│   └── SetRowView.swift
 │
-├── Components/                  # Reusable UI components
-└── Utilities/                   # Extensions and helpers
+└── Utilities/                 # Helpers & extensions
+    ├── AppTheme.swift         # Design system
+    ├── ExportManager.swift    # PDF/CSV export
+    └── Extensions.swift
 ```
+
+### Data Model
+
+```
+User (Firebase Auth)
+  └── Programs (Firestore Collection)
+        ├── Program
+        │    └── WorkoutDays[]
+        │         └── Exercises[]
+        │              ├── targetSets
+        │              ├── targetReps
+        │              └── targetWeight
+        │
+        ├── WorkoutLogs (Firestore Collection)
+        │    ├── programId (reference)
+        │    ├── dayId (reference)
+        │    └── completedSets[]
+        │         ├── actualReps
+        │         └── actualWeight
+        │
+        └── PersonalRecords (Firestore Collection)
+             ├── exerciseName
+             ├── maxWeight
+             └── estimatedOneRepMax
+```
+
+### Key Features
+
+**Program Management**
+- Create unlimited workout programs (e.g., "PPL", "5/3/1", "Hypertrophy Block")
+- Organize programs into workout days (e.g., "Push Day A", "Pull Day B")
+- Define target sets, reps, and weights for each exercise
+- Copy, share, and delete programs with confirmation
+
+**Active Workout Logging**
+- Start workouts from templates or create quick workouts
+- Check off sets in real-time with rest timers
+- Automatically detect personal records
+- Modify exercises and weights on the fly
+
+**Progress Tracking**
+- Visual charts showing weekly volume trends
+- Exercise-specific progress graphs
+- Personal record history with estimated 1RM calculations
+- Export data to PDF or CSV
+
+**Authentication**
+- Apple Sign In (primary)
+- Email/Password fallback
+- Secure user data isolation via Firestore security rules
+
+## Setup
+
+### Prerequisites
+
+- Xcode 15.0+
+- iOS 17.0+ device or simulator
+- Firebase account
+- Apple Developer account (for TestFlight/App Store)
+
+### Firebase Configuration
+
+1. **Create Firebase Project**
+   - Go to [Firebase Console](https://console.firebase.google.com/)
+   - Create a new project
+   - Add an iOS app with bundle ID: `com.yourname.workouttracker`
+
+2. **Download Configuration**
+   - Download `GoogleService-Info.plist`
+   - Add it to `WorkoutTracker/` directory in Xcode
+   - **Never commit this file to version control**
+
+3. **Enable Services**
+
+   **Authentication:**
+   - Enable Apple Sign In
+   - Enable Email/Password
+
+   **Firestore Database:**
+   - Create database in your preferred region
+   - Deploy security rules from `firestore.rules`:
+
+   ```javascript
+   rules_version = '2';
+   service cloud.firestore {
+     match /databases/{database}/documents {
+       function isAuthenticated() {
+         return request.auth != null;
+       }
+
+       match /programs/{programId} {
+         allow read, write: if isAuthenticated() &&
+                               resource.data.userId == request.auth.uid;
+         allow create: if isAuthenticated() &&
+                          request.resource.data.userId == request.auth.uid;
+       }
+
+       match /workoutLogs/{logId} {
+         allow read, write: if isAuthenticated() &&
+                               resource.data.userId == request.auth.uid;
+         allow create: if isAuthenticated() &&
+                          request.resource.data.userId == request.auth.uid;
+       }
+
+       match /personalRecords/{recordId} {
+         allow read, write: if isAuthenticated() &&
+                               resource.data.userId == request.auth.uid;
+         allow create: if isAuthenticated() &&
+                          request.resource.data.userId == request.auth.uid;
+       }
+
+       match /{document=**} {
+         allow read, write: if false;
+       }
+     }
+   }
+   ```
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Nickostick/ProjectLiftOff.git
+   cd ProjectLiftOff
+   ```
+
+2. **Add Firebase configuration**
+   - Place your `GoogleService-Info.plist` in `WorkoutTracker/` directory
+
+3. **Open in Xcode**
+   ```bash
+   open WorkoutTracker.xcodeproj
+   ```
+
+4. **Configure signing**
+   - Select your development team in Signing & Capabilities
+   - Update bundle identifier if needed
+
+5. **Build and run**
+   - Select a device or simulator
+   - Press Cmd+R to build and run
 
 ## Usage
 
-### Creating a Program
+### Creating Your First Program
 
-1. Go to the "Programs" tab
-2. Tap "+" to create a new program
-3. Add workout days (e.g., "Arm Day", "Leg Day")
-4. Add exercises to each day with sets, reps, and target weight
+1. Navigate to **Programs** tab
+2. Tap **+** to create a new program
+3. Name it (e.g., "Push Pull Legs")
+4. Add workout days:
+   - Push Day: Bench, Overhead Press, Tricep Extensions
+   - Pull Day: Deadlift, Rows, Bicep Curls
+   - Leg Day: Squats, Leg Press, Leg Curls
+5. For each exercise, set target sets, reps, and weight
 
 ### Logging a Workout
 
-1. Go to "Home" tab and tap "Start Workout"
-2. Select a program and day, or start a quick workout
-3. Log your actual reps and weight for each set
-4. Tap the checkmark to complete each set
-5. Finish workout to save and check for PRs
+1. Go to **Home** tab
+2. Tap **"Start Workout"**
+3. Select a program and day (or create a quick workout)
+4. For each set:
+   - Enter actual reps and weight
+   - Tap checkmark to complete
+   - Rest timer starts automatically
+5. Tap **"Finish Workout"** when done
+6. Review any new personal records!
 
-### Viewing Reports
+### Viewing Progress
 
-1. Go to "Reports" tab
-2. View weekly volume trends
-3. Check personal records
+1. Navigate to **Reports** tab
+2. Select time range (1W, 1M, 3M, 1Y, ALL)
+3. View:
+   - Weekly volume trends
+   - Exercise-specific progress
+   - Personal records list
 4. Export data as PDF or CSV
+
+## Security
+
+**This repository does NOT contain:**
+- ❌ Firebase API keys
+- ❌ Database credentials
+- ❌ User data
+
+**You must:**
+- ✅ Create your own Firebase project
+- ✅ Add your own `GoogleService-Info.plist`
+- ✅ Deploy Firestore security rules
+- ✅ Never commit credentials to version control
+
+**Firestore security rules ensure:**
+- Users can only read/write their own data
+- All operations require authentication
+- No cross-user data access
+
+## Distribution
+
+### TestFlight (Recommended for Personal Use)
+
+- Upload builds via Xcode
+- Builds expire after 90 days
+- Free with Apple Developer account
+- No App Store review required
+
+### App Store
+
+- Requires screenshots, description, and review
+- One-time setup, no expiration
+- Can be private (unlisted) or public
+
+## Roadmap
+
+Potential future enhancements:
+
+- [ ] Exercise library with instructions and videos
+- [ ] Workout templates marketplace
+- [ ] Social features (share workouts, follow friends)
+- [ ] Advanced analytics (periodization, deload recommendations)
+- [ ] Apple Watch companion app
+- [ ] HealthKit integration
+- [ ] Custom exercise creation
+
+## Contributing
+
+This is a personal project, but feedback and suggestions are welcome! Feel free to:
+
+- Open issues for bugs or feature requests
+- Submit pull requests
+- Fork and customize for your own needs
 
 ## License
 
-MIT License - feel free to use and modify for your own projects.
+MIT License - See LICENSE file for details
+
+## Acknowledgments
+
+Built with:
+- [Firebase iOS SDK](https://firebase.google.com/docs/ios/setup)
+- [SwiftUI](https://developer.apple.com/xcode/swiftui/)
+- Apple's Human Interface Guidelines
+
+---
+
+**Note**: This is a workout tracking app template. You must set up your own Firebase backend to use it. See [Setup](#setup) for instructions.
