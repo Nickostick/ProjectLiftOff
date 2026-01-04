@@ -1,10 +1,19 @@
-# Workout Tracker iOS App
+# ProjectLiftOff 🏋️
 
-A complete iOS app for tracking workouts, replacing spreadsheet-based workout logging with cloud-synced templates, workout logging, and progress reporting.
+A complete iOS workout tracking app with Firebase backend, featuring workout programs, real-time logging, progressive overload tracking, and detailed progress reports.
+
+## ⚠️ Security Notice
+
+**This is a template app.** You must set up your own Firebase project to use it:
+- The repository does NOT contain API keys or sensitive credentials
+- You need to add your own `GoogleService-Info.plist` (see setup below)
+- Configure Firebase Security Rules to protect your data
+- Never commit your real Firebase config file to version control
 
 ## Features
 
-- **Authentication**: Email/password signup and login via Firebase Auth
+- **Authentication**: Apple Sign In and email/password via Firebase Auth
+- **Premium Dark Theme**: Modern dark UI with neon green (#D4FF00) accents
 - **Program Templates**: Create, edit, copy, share, and delete workout programs
 - **Workout Days**: Organize programs into multiple workout days (e.g., "Arm Day", "Chest Day")
 - **Exercises**: Track sets, reps, weight, notes, and rest times
@@ -44,33 +53,18 @@ In Firebase Console:
 1. **Authentication**:
    - Go to Authentication → Sign-in method
    - Enable "Email/Password"
+   - Enable "Apple" for Sign in with Apple support
 
 2. **Firestore**:
    - Go to Firestore Database → Create database
    - Choose "Start in test mode" for development
    - Select a location close to your users
 
-3. **Security Rules** (Production):
-   ```javascript
-   rules_version = '2';
-   service cloud.firestore {
-     match /databases/{database}/documents {
-       // Users can only access their own data
-       match /programs/{programId} {
-         allow read, write: if request.auth != null && request.auth.uid == resource.data.userId;
-         allow create: if request.auth != null && request.auth.uid == request.resource.data.userId;
-       }
-       match /workoutLogs/{logId} {
-         allow read, write: if request.auth != null && request.auth.uid == resource.data.userId;
-         allow create: if request.auth != null && request.auth.uid == request.resource.data.userId;
-       }
-       match /personalRecords/{recordId} {
-         allow read, write: if request.auth != null && request.auth.uid == resource.data.userId;
-         allow create: if request.auth != null && request.auth.uid == request.resource.data.userId;
-       }
-     }
-   }
-   ```
+3. **Security Rules** (REQUIRED for production):
+   - In Firestore Console, go to Rules tab
+   - Copy the contents from `firestore.rules` in this repo
+   - Deploy the rules to ensure users can only access their own data
+   - **Critical**: Never use "test mode" rules in production!
 
 ## Installation
 
