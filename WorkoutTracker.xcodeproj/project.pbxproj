@@ -1,0 +1,634 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4B58E20C49574ABC85186DF9 /* LibraryExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E5BBCA86E54473BFA6C92C /* LibraryExercise.swift */; };
+		26561648967741239E681AAF /* SessionExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F1DA06D6864EB4BC9989FD /* SessionExercise.swift */; };
+		4748FECEA9014846833D7F30 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF10294D0024859B64AE8C2 /* Session.swift */; };
+		00000001 /* WorkoutTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000001 /* WorkoutTrackerApp.swift */; };
+		00000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000002 /* ContentView.swift */; };
+		00000003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10000003 /* Assets.xcassets */; };
+		00000004 /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000004 /* Program.swift */; };
+		00000005 /* WorkoutDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000005 /* WorkoutDay.swift */; };
+		00000006 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000006 /* Exercise.swift */; };
+		00000007 /* WorkoutLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000007 /* WorkoutLog.swift */; };
+		00000008 /* PersonalRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000008 /* PersonalRecord.swift */; };
+		00000009 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000009 /* AuthViewModel.swift */; };
+		00000010 /* ProgramViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000010 /* ProgramViewModel.swift */; };
+		00000011 /* WorkoutLogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000011 /* WorkoutLogViewModel.swift */; };
+		00000012 /* ReportsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000012 /* ReportsViewModel.swift */; };
+		00000013 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000013 /* FirebaseService.swift */; };
+		00000014 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000014 /* AuthManager.swift */; };
+		00000015 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000015 /* FirestoreManager.swift */; };
+		00000016 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000016 /* NotificationManager.swift */; };
+		00000017 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000017 /* Constants.swift */; };
+		00000018 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000018 /* Extensions.swift */; };
+		00000019 /* ExportManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000019 /* ExportManager.swift */; };
+		00000020 /* StatCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000020 /* StatCardView.swift */; };
+		00000021 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000021 /* EmptyStateView.swift */; };
+		00000022 /* ExerciseRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000022 /* ExerciseRowView.swift */; };
+		00000023 /* SetRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000023 /* SetRowView.swift */; };
+		00000024 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000024 /* AuthenticationView.swift */; };
+		00000025 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000025 /* HomeView.swift */; };
+		00000026 /* ProgramListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000026 /* ProgramListView.swift */; };
+		00000027 /* ProgramDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000027 /* ProgramDetailView.swift */; };
+		00000028 /* ProgramFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000028 /* ProgramFormView.swift */; };
+		00000029 /* WorkoutDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000029 /* WorkoutDayView.swift */; };
+		00000030 /* WorkoutDayFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000030 /* WorkoutDayFormView.swift */; };
+		00000031 /* ExerciseFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000031 /* ExerciseFormView.swift */; };
+		00000032 /* ActiveWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000032 /* ActiveWorkoutView.swift */; };
+		00000033 /* LogListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000033 /* LogListView.swift */; };
+		00000034 /* LogDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000034 /* LogDetailView.swift */; };
+		00000035 /* ReportsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000035 /* ReportsView.swift */; };
+		00000036 /* ProgressChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000036 /* ProgressChartView.swift */; };
+		00000037 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 20000001 /* FirebaseAuth */; };
+		00000038 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 20000002 /* FirebaseFirestore */; };
+		E1F71BDE2F0858C200DD9BD8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1F71BDD2F0858C200DD9BD8 /* GoogleService-Info.plist */; };
+		076EA2A43597CB910A07432C /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D1BB78D3DD59F34287F8C8 /* AppTheme.swift */; };
+		E57445FE292A309663250B7B /* PremiumCardComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB8DC55F254FBCD254C02F3 /* PremiumCardComponents.swift */; };
+		3B27D63E2F3AE43C818CFC72 /* HomeView_Premium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D71ED59A88C2531616C5D0D /* HomeView_Premium.swift */; };
+		ABB62BB837FA61ED821E1367 /* ProgramListView_Premium.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA57F8829CDD6BF5095A03F /* ProgramListView_Premium.swift */; };
+		FC174729DDCF8325E343849C /* ReportsView_Premium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1A46721757033C97967C14 /* ReportsView_Premium.swift */; };
+		18CAC2E95D64A143B83198C2 /* PremiumTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C026525D1266D921C2BBA7FB /* PremiumTabBar.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		37E5BBCA86E54473BFA6C92C /* LibraryExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryExercise.swift; sourceTree = "<group>"; };
+		F6F1DA06D6864EB4BC9989FD /* SessionExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionExercise.swift; sourceTree = "<group>"; };
+		DDF10294D0024859B64AE8C2 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		10000000 /* WorkoutTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkoutTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		10000001 /* WorkoutTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTrackerApp.swift; sourceTree = "<group>"; };
+		10000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		10000003 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		10000004 /* Program.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Program.swift; sourceTree = "<group>"; };
+		10000005 /* WorkoutDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDay.swift; sourceTree = "<group>"; };
+		10000006 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		10000007 /* WorkoutLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutLog.swift; sourceTree = "<group>"; };
+		10000008 /* PersonalRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalRecord.swift; sourceTree = "<group>"; };
+		10000009 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		10000010 /* ProgramViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramViewModel.swift; sourceTree = "<group>"; };
+		10000011 /* WorkoutLogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutLogViewModel.swift; sourceTree = "<group>"; };
+		10000012 /* ReportsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsViewModel.swift; sourceTree = "<group>"; };
+		10000013 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		10000014 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		10000015 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
+		10000016 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		10000017 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		10000018 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		10000019 /* ExportManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportManager.swift; sourceTree = "<group>"; };
+		10000020 /* StatCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatCardView.swift; sourceTree = "<group>"; };
+		10000021 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		10000022 /* ExerciseRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseRowView.swift; sourceTree = "<group>"; };
+		10000023 /* SetRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRowView.swift; sourceTree = "<group>"; };
+		10000024 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
+		10000025 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		10000026 /* ProgramListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramListView.swift; sourceTree = "<group>"; };
+		10000027 /* ProgramDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramDetailView.swift; sourceTree = "<group>"; };
+		10000028 /* ProgramFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramFormView.swift; sourceTree = "<group>"; };
+		10000029 /* WorkoutDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDayView.swift; sourceTree = "<group>"; };
+		10000030 /* WorkoutDayFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDayFormView.swift; sourceTree = "<group>"; };
+		10000031 /* ExerciseFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseFormView.swift; sourceTree = "<group>"; };
+		10000032 /* ActiveWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveWorkoutView.swift; sourceTree = "<group>"; };
+		10000033 /* LogListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogListView.swift; sourceTree = "<group>"; };
+		10000034 /* LogDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDetailView.swift; sourceTree = "<group>"; };
+		10000035 /* ReportsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsView.swift; sourceTree = "<group>"; };
+		10000036 /* ProgressChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressChartView.swift; sourceTree = "<group>"; };
+		E1F71BDD2F0858C200DD9BD8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		63D1BB78D3DD59F34287F8C8 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		BDB8DC55F254FBCD254C02F3 /* PremiumCardComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumCardComponents.swift; sourceTree = "<group>"; };
+		5D71ED59A88C2531616C5D0D /* HomeView_Premium.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView_Premium.swift; sourceTree = "<group>"; };
+		FAA57F8829CDD6BF5095A03F /* ProgramListView_Premium.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramListView_Premium.swift; sourceTree = "<group>"; };
+		6D1A46721757033C97967C14 /* ReportsView_Premium.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsView_Premium.swift; sourceTree = "<group>"; };
+		C026525D1266D921C2BBA7FB /* PremiumTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumTabBar.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		30000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00000037 /* FirebaseAuth in Frameworks */,
+				00000038 /* FirebaseFirestore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		40000000 = {
+			isa = PBXGroup;
+			children = (
+				40000001 /* WorkoutTracker */,
+				40000002 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		40000001 /* WorkoutTracker */ = {
+			isa = PBXGroup;
+			children = (
+				E1F71BDD2F0858C200DD9BD8 /* GoogleService-Info.plist */,
+				10000001 /* WorkoutTrackerApp.swift */,
+				10000002 /* ContentView.swift */,
+				10000003 /* Assets.xcassets */,
+				40000003 /* Models */,
+				40000004 /* ViewModels */,
+				40000005 /* Services */,
+				40000006 /* Views */,
+				40000010 /* Components */,
+				40000011 /* Utilities */,
+			);
+			path = WorkoutTracker;
+			sourceTree = "<group>";
+		};
+		40000002 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				10000000 /* WorkoutTracker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		40000003 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				10000004 /* Program.swift */,
+				10000005 /* WorkoutDay.swift */,
+				10000006 /* Exercise.swift */,
+				10000007 /* WorkoutLog.swift */,
+				10000008 /* PersonalRecord.swift */,
+							37E5BBCA86E54473BFA6C92C /* Session.swift */,
+				F6F1DA06D6864EB4BC9989FD /* Session.swift */,
+				DDF10294D0024859B64AE8C2 /* Session.swift */,
+);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		40000004 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				10000009 /* AuthViewModel.swift */,
+				10000010 /* ProgramViewModel.swift */,
+				10000011 /* WorkoutLogViewModel.swift */,
+				10000012 /* ReportsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		40000005 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				10000013 /* FirebaseService.swift */,
+				10000014 /* AuthManager.swift */,
+				10000015 /* FirestoreManager.swift */,
+				10000016 /* NotificationManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		40000006 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				40000007 /* Auth */,
+				40000012 /* Home */,
+				40000008 /* Templates */,
+				40000009 /* Logs */,
+				40000013 /* Reports */,
+							C026525D1266D921C2BBA7FB /* PremiumTabBar.swift */,
+);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		40000007 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				10000024 /* AuthenticationView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		40000008 /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+				10000026 /* ProgramListView.swift */,
+				10000027 /* ProgramDetailView.swift */,
+				10000028 /* ProgramFormView.swift */,
+				10000029 /* WorkoutDayView.swift */,
+				10000030 /* WorkoutDayFormView.swift */,
+				10000031 /* ExerciseFormView.swift */,
+							FAA57F8829CDD6BF5095A03F /* ProgramListView_Premium.swift */,
+);
+			path = Templates;
+			sourceTree = "<group>";
+		};
+		40000009 /* Logs */ = {
+			isa = PBXGroup;
+			children = (
+				10000032 /* ActiveWorkoutView.swift */,
+				10000033 /* LogListView.swift */,
+				10000034 /* LogDetailView.swift */,
+			);
+			path = Logs;
+			sourceTree = "<group>";
+		};
+		40000010 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				10000020 /* StatCardView.swift */,
+				10000021 /* EmptyStateView.swift */,
+				10000022 /* ExerciseRowView.swift */,
+				10000023 /* SetRowView.swift */,
+							BDB8DC55F254FBCD254C02F3 /* PremiumCardComponents.swift */,
+);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		40000011 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				10000017 /* Constants.swift */,
+				10000018 /* Extensions.swift */,
+				10000019 /* ExportManager.swift */,
+							63D1BB78D3DD59F34287F8C8 /* AppTheme.swift */,
+);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		40000012 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				10000025 /* HomeView.swift */,
+							5D71ED59A88C2531616C5D0D /* HomeView_Premium.swift */,
+);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		40000013 /* Reports */ = {
+			isa = PBXGroup;
+			children = (
+				10000035 /* ReportsView.swift */,
+				10000036 /* ProgressChartView.swift */,
+							6D1A46721757033C97967C14 /* ReportsView_Premium.swift */,
+);
+			path = Reports;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		50000001 /* WorkoutTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60000003 /* Build configuration list for PBXNativeTarget "WorkoutTracker" */;
+			buildPhases = (
+				50000002 /* Sources */,
+				30000001 /* Frameworks */,
+				50000003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WorkoutTracker;
+			packageProductDependencies = (
+				20000001 /* FirebaseAuth */,
+				20000002 /* FirebaseFirestore */,
+			);
+			productName = WorkoutTracker;
+			productReference = 10000000 /* WorkoutTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		70000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					50000001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = 60000001 /* Build configuration list for PBXProject "WorkoutTracker" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 40000000;
+			packageReferences = (
+				80000001 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = 40000002 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				50000001 /* WorkoutTracker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		50000003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00000003 /* Assets.xcassets in Resources */,
+				E1F71BDE2F0858C200DD9BD8 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		50000002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00000001 /* WorkoutTrackerApp.swift in Sources */,
+				00000002 /* ContentView.swift in Sources */,
+				00000004 /* Program.swift in Sources */,
+				00000005 /* WorkoutDay.swift in Sources */,
+				00000006 /* Exercise.swift in Sources */,
+				00000007 /* WorkoutLog.swift in Sources */,
+				00000008 /* PersonalRecord.swift in Sources */,
+				00000009 /* AuthViewModel.swift in Sources */,
+				00000010 /* ProgramViewModel.swift in Sources */,
+				00000011 /* WorkoutLogViewModel.swift in Sources */,
+				00000012 /* ReportsViewModel.swift in Sources */,
+				00000013 /* FirebaseService.swift in Sources */,
+				00000014 /* AuthManager.swift in Sources */,
+				00000015 /* FirestoreManager.swift in Sources */,
+				00000016 /* NotificationManager.swift in Sources */,
+				00000017 /* Constants.swift in Sources */,
+				00000018 /* Extensions.swift in Sources */,
+				00000019 /* ExportManager.swift in Sources */,
+				00000020 /* StatCardView.swift in Sources */,
+				00000021 /* EmptyStateView.swift in Sources */,
+				00000022 /* ExerciseRowView.swift in Sources */,
+				00000023 /* SetRowView.swift in Sources */,
+				00000024 /* AuthenticationView.swift in Sources */,
+				00000025 /* HomeView.swift in Sources */,
+				00000026 /* ProgramListView.swift in Sources */,
+				00000027 /* ProgramDetailView.swift in Sources */,
+				00000028 /* ProgramFormView.swift in Sources */,
+				00000029 /* WorkoutDayView.swift in Sources */,
+				00000030 /* WorkoutDayFormView.swift in Sources */,
+				00000031 /* ExerciseFormView.swift in Sources */,
+				00000032 /* ActiveWorkoutView.swift in Sources */,
+				00000033 /* LogListView.swift in Sources */,
+				00000034 /* LogDetailView.swift in Sources */,
+				00000035 /* ReportsView.swift in Sources */,
+				00000036 /* ProgressChartView.swift in Sources */,
+							076EA2A43597CB910A07432C /* AppTheme.swift in Sources */,
+				E57445FE292A309663250B7B /* PremiumCardComponents.swift in Sources */,
+				3B27D63E2F3AE43C818CFC72 /* HomeView_Premium.swift in Sources */,
+				ABB62BB837FA61ED821E1367 /* ProgramListView_Premium.swift in Sources */,
+				FC174729DDCF8325E343849C /* ReportsView_Premium.swift in Sources */,
+				18CAC2E95D64A143B83198C2 /* PremiumTabBar.swift in Sources */,
+				4B58E20C49574ABC85186DF9 /* LibraryExercise.swift in Sources */,
+				26561648967741239E681AAF /* SessionExercise.swift in Sources */,
+				4748FECEA9014846833D7F30 /* Session.swift in Sources */,
+);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		60000002 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		60000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		60000005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 35Q5DRWA8G;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Workout Tracker";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nicholasprijic.workouttracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		60000006 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 35Q5DRWA8G;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Workout Tracker";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nicholasprijic.workouttracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		60000001 /* Build configuration list for PBXProject "WorkoutTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60000002 /* Debug */,
+				60000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		60000003 /* Build configuration list for PBXNativeTarget "WorkoutTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60000005 /* Debug */,
+				60000006 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		80000001 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.19.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		20000001 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 80000001 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		20000002 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 80000001 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 70000001 /* Project object */;
+}
