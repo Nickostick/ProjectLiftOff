@@ -15,12 +15,13 @@ final class WorkoutLogViewModel: ObservableObject {
     @Published var workoutTimer: TimeInterval = 0
     @Published var isWorkoutActive = false
     @Published var newPRs: [String] = [] // Exercise names with new PRs
-    
+
     // MARK: - Dependencies
     private let firestoreManager: FirestoreManager
     private let userId: String
     private var cancellables = Set<AnyCancellable>()
     private var timerCancellable: AnyCancellable?
+    private var workoutStartTime: Date? // Store start time for accurate duration
     
     // MARK: - Computed Properties
     var recentLogs: [WorkoutLog] {
@@ -241,6 +242,11 @@ final class WorkoutLogViewModel: ObservableObject {
         workoutTimer = 0
         newPRs = []
     }
+
+    /// Refresh timer display (call when view appears after backgrounding)
+    func refreshTimer() {
+        updateTimerFromStartTime()
+    }
     
     // MARK: - Log Operations
     
@@ -297,19 +303,33 @@ final class WorkoutLogViewModel: ObservableObject {
     }
     
     // MARK: - Timer
-    
+
     private func startTimer() {
+        workoutStartTime = Date()
         workoutTimer = 0
+
+        // Timer updates the display every second by recalculating from start time
+        // This ensures accuracy even if app is backgrounded
         timerCancellable = Timer.publish(every: 1, on: .main, in: .common)
             .autoconnect()
             .sink { [weak self] _ in
-                self?.workoutTimer += 1
+                self?.updateTimerFromStartTime()
             }
     }
-    
+
+    private func updateTimerFromStartTime() {
+        guard let startTime = workoutStartTime else { return }
+        workoutTimer = Date().timeIntervalSince(startTime)
+    }
+
     private func stopTimer() {
+        // Calculate final duration before stopping
+        if let startTime = workoutStartTime {
+            workoutTimer = Date().timeIntervalSince(startTime)
+        }
         timerCancellable?.cancel()
         timerCancellable = nil
+        workoutStartTime = nil
     }
     
     // MARK: - Error Handling

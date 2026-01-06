@@ -110,6 +110,8 @@ struct ActiveWorkoutView: View {
                 if let workout = viewModel.activeWorkout {
                     expandedExercises = Set(workout.exercises.map { $0.id })
                 }
+                // Refresh timer to show accurate time after backgrounding
+                viewModel.refreshTimer()
             }
         }
         .interactiveDismissDisabled()

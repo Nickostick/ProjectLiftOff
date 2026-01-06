@@ -29,17 +29,19 @@ final class FirebaseService {
         // Now safe to create managers that access Firebase
         self.auth = AuthManager()
         self.firestore = FirestoreManager()
-        
+
+        // Setup auth state listener to persist login
+        self.auth.setupAuthStateListener()
+
         isConfigured = true
         print("🔥 Firebase configured successfully")
     }
     
     /// Configure Firebase - call this once at app startup
+    /// (Configuration now happens automatically in init)
     func configure() {
-        guard !isConfigured else { return }
-        
-        // Setup auth state listener
-        auth.setupAuthStateListener()
+        // Auth state listener is now set up in init
+        // This method kept for backwards compatibility
     }
 }
 
